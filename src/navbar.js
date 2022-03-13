@@ -1,36 +1,71 @@
-export default function navBar() {
+function LogoMobile(){
     return (
-        <div class="navbar">
-        <div class="container">
-          <div class="logo">
-            <ion-icon name="logo-instagram"></ion-icon>
-            <div class="separador"></div>
-            <img src="assets/img/logo.png" />
-          </div>
+            <div class="logo">
+                <ion-icon name="logo-instagram"></ion-icon>
+                <div class="separador"></div>
+                <img src="assets/img/logo.png" />
+            </div>);
+}
 
-          <div class="logo-mobile">
+function LogoDesktop(){
+    return(        
+        <div class="logo-mobile">
             <ion-icon name="logo-instagram"></ion-icon>
-          </div>
+        </div>);
+}
 
-          <div class="instagram-mobile">
+function InstagramMobile(){
+    return(
+        <div class="instagram-mobile">
             <img src="assets/img/logo.png" />
-          </div>
-  
-          <div class="pesquisa">
+        </div>);
+}
+
+function BarraDePesquisa(){
+    return(
+        <div class="pesquisa">
             <input type="text" placeholder="Pesquisar" />
-          </div>
-  
-          <div class="icones">
-            <ion-icon name="paper-plane-outline"></ion-icon>
-            <ion-icon name="compass-outline"></ion-icon>
-            <ion-icon name="heart-outline"></ion-icon>
-            <ion-icon name="person-outline"></ion-icon>
-          </div>
+        </div>);
+}
 
-          <div class="icones-mobile">
-            <ion-icon name="paper-plane-outline"></ion-icon>
-          </div>
-        </div>
-      </div>
+function Icone(props){
+    return(
+        <ion-icon name={props.nomeIcone}></ion-icon>
     )
+}
+function Icones(){
+    return(
+        <div class="icones">
+            <Icone nomeIcone="paper-plane-outline"/>
+            <Icone nomeIcone="compass-outline"/>
+            <Icone nomeIcone="heart-outline"/>
+            <Icone nomeIcone="person-outline"/>
+        </div>);
+}
+
+function IconesMobile(){
+    return(
+        <div class="icones-mobile">
+            <Icone nomeIcone="paper-plane-outline"/>
+        </div>);
+}
+
+function Container(){
+    return(
+        <div class="container">
+            <LogoDesktop/>
+            <LogoMobile/>
+            <InstagramMobile/>
+            <BarraDePesquisa/>
+            <Icones/>
+            <IconesMobile/>
+        </div>
+    );
+}
+
+export default function NavBar(){
+    return(
+        <section class="navbar">
+            <Container/>    
+        </section>);
 }
