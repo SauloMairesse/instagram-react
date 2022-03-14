@@ -1,7 +1,13 @@
+function Icone(props){
+    return(
+        <ion-icon name={props.nomeIcone}></ion-icon>
+    )
+}
+
 function LogoMobile(){
     return (
             <div class="logo">
-                <ion-icon name="logo-instagram"></ion-icon>
+                <Icone nomeIcone="logo-instagram"/>
                 <div class="separador"></div>
                 <img src="assets/img/logo.png" />
             </div>);
@@ -10,7 +16,7 @@ function LogoMobile(){
 function LogoDesktop(){
     return(        
         <div class="logo-mobile">
-            <ion-icon name="logo-instagram"></ion-icon>
+            <Icone nomeIcone="logo-instagram"/>
         </div>);
 }
 
@@ -28,11 +34,6 @@ function BarraDePesquisa(){
         </div>);
 }
 
-function Icone(props){
-    return(
-        <ion-icon name={props.nomeIcone}></ion-icon>
-    )
-}
 function Icones(){
     return(
         <div class="icones">
