@@ -39,7 +39,7 @@ function Setinha(){
 export default function Stories(){
     return (
         <div class="stories">
-            {storiesINFO.map( story => <Story img={storiesINFO.imagem} usuario={storiesINFO.usuario}/>)}
+            {storiesINFO.map( story => <Story imagem={storiesINFO.imagem} usuario={storiesINFO.usuario}/>)}
             <Setinha/>
         </div>
     );
