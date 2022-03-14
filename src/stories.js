@@ -5,8 +5,8 @@ const storiesINFO = [
     {imagem: "assets/img/nathanwpylestrangeplanet.svg", usuario: "nathanwpylestrangeplanet"},
     {imagem: "assets/img/wawawicomics.svg", usuario: "wawawicomics"},
     {imagem: "assets/img/respondeai.svg", usuario: "respondeai"},
-    {imagem: "assets/img/filomoderna.svg", usuario: "filomoderna"},
-    {imagem: "assets/img/memeriagourmet.svg", usuario: "memeriagourmet"}
+    {imagem: "./assets/img/filomoderna.svg", usuario: "filomoderna"},
+    {imagem: "./assets/img/memeriagourmet.svg", usuario: "memeriagourmet"}
 ]
 
 function Story(props){
@@ -37,9 +37,10 @@ function Setinha(){
 }
 
 export default function Stories(){
+    console.log(storiesINFO)
     return (
         <div class="stories">
-            {storiesINFO.map( story => <Story imagem={storiesINFO.imagem} usuario={storiesINFO.usuario}/>)}
+            {storiesINFO.map( story => <Story imagem={story.imagem} usuario={story.usuario}/>)}
             <Setinha/>
         </div>
     );

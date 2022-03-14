@@ -3,7 +3,7 @@ import Sugestoes from "./sugestoes"
 export default function SideBar(){
     return (
         <div class="sidebar">
-            <Usuario />
+            <Usuario imgUsuario={"assets/img/catanacomics.svg"} tagUsuario={"catanacomics"} nickUsuario={"catana"}/>
             <Sugestoes />
             <Links />
             <CopyRight />
@@ -11,13 +11,13 @@ export default function SideBar(){
     );
 }
 
-function Usuario(){
+function Usuario(props){
     return (
         <div class="usuario">
-            <img src="assets/img/catanacomics.svg" />
+            <img src={props.imgUsuario} />
             <div class="texto">
-              <strong>catanacomics</strong>
-              Catana
+              <strong>{props.tagUsuario}</strong>
+              {props.nickUsuario}
             </div>
         </div>
     );

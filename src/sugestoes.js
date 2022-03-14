@@ -2,7 +2,7 @@ export default function Sugestoes(){
     return(
         <div class="sugestoes">
             <Titulo />
-            {sugestoesINFO.map(sugestao => <Sugestao imagem={sugestoesINFO.imagem} nome={sugestoesINFO.nome} razao={sugestoesINFO.razao}/>)}
+            {sugestoesINFO.map(sugestao => <Sugestao imagem={sugestao.imagem} nome={sugestao.nome} razao={sugestao.razao}/>)}
         </div>
     );
 }
